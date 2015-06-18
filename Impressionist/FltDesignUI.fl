@@ -1,0 +1,159 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0010 
+header_name {.h} 
+code_name {.cpp} 
+gridx 4 
+gridy 4 
+snap 4
+class FltDesignUI {open
+} {
+  decl {\#include "ImpressionistUI.h"} {}
+  Function {FltDesignUI()} {open
+  } {
+    Fl_Window mainWindow {
+      label {Filter Design UI} open selected
+      xywh {474 156 286 320} modal visible
+    } {
+      Fl_Group kernel {
+        label {Filter Kernel} open
+        xywh {0 20 272 140} box ENGRAVED_FRAME when 1
+      } {
+        Fl_Value_Input ele0 {
+          callback {impUI->updateFilter();}
+          xywh {5 26 50 25} maximum 255
+        }
+        Fl_Value_Input ele1 {
+          callback {impUI->updateFilter();}
+          xywh {58 26 50 25} maximum 255
+        }
+        Fl_Value_Input ele2 {
+          callback {impUI->updateFilter();}
+          xywh {111 26 50 25} maximum 255
+        }
+        Fl_Value_Input ele3 {
+          callback {impUI->updateFilter();}
+          xywh {164 26 50 25} maximum 255
+        }
+        Fl_Value_Input ele4 {
+          callback {impUI->updateFilter();}
+          xywh {217 26 50 25} maximum 255
+        }
+        Fl_Value_Input ele5 {
+          callback {impUI->updateFilter();}
+          xywh {5 52 50 25} maximum 255
+        }
+        Fl_Value_Input ele6 {
+          callback {impUI->updateFilter();}
+          xywh {58 52 50 25} maximum 255
+        }
+        Fl_Value_Input ele7 {
+          callback {impUI->updateFilter();}
+          xywh {111 52 50 25} maximum 255
+        }
+        Fl_Value_Input ele8 {
+          callback {impUI->updateFilter();}
+          xywh {164 52 50 25} maximum 255
+        }
+        Fl_Value_Input ele9 {
+          callback {impUI->updateFilter();}
+          xywh {217 52 50 25} maximum 255
+        }
+        Fl_Value_Input ele10 {
+          callback {impUI->updateFilter();}
+          xywh {5 78 50 25} maximum 255
+        }
+        Fl_Value_Input ele11 {
+          callback {impUI->updateFilter();}
+          xywh {58 78 50 25} maximum 255
+        }
+        Fl_Value_Input ele12 {
+          callback {impUI->updateFilter();}
+          xywh {111 78 50 25} maximum 255 value 1
+        }
+        Fl_Value_Input ele13 {
+          callback {impUI->updateFilter();}
+          xywh {164 78 50 25} maximum 255
+        }
+        Fl_Value_Input ele14 {
+          callback {impUI->updateFilter();}
+          xywh {217 78 50 25} maximum 255
+        }
+        Fl_Value_Input ele15 {
+          callback {impUI->updateFilter();}
+          xywh {5 104 50 25} maximum 255
+        }
+        Fl_Value_Input ele16 {
+          callback {impUI->updateFilter();}
+          xywh {58 104 50 25} maximum 255
+        }
+        Fl_Value_Input ele17 {
+          callback {impUI->updateFilter();}
+          xywh {111 104 50 25} maximum 255
+        }
+        Fl_Value_Input ele18 {
+          callback {impUI->updateFilter();}
+          xywh {164 104 50 25} maximum 255
+        }
+        Fl_Value_Input ele19 {
+          callback {impUI->updateFilter();}
+          xywh {217 104 50 25} maximum 255
+        }
+        Fl_Value_Input ele20 {
+          callback {impUI->updateFilter();}
+          xywh {5 130 50 25} maximum 255
+        }
+        Fl_Value_Input ele21 {
+          callback {impUI->updateFilter();}
+          xywh {58 130 50 25} maximum 255
+        }
+        Fl_Value_Input ele22 {
+          callback {impUI->updateFilter();}
+          xywh {111 130 50 25} maximum 255
+        }
+        Fl_Value_Input ele23 {
+          callback {impUI->updateFilter();}
+          xywh {164 130 50 25} maximum 255
+        }
+        Fl_Value_Input ele24 {
+          callback {impUI->updateFilter();}
+          xywh {217 130 50 25} maximum 255
+        }
+      }
+      Fl_Value_Input scale {
+        label {Divide by::}
+        callback {impUI->updateFilter();}
+        xywh {112 163 154 25} maximum 255 value 1
+      }
+      Fl_Value_Input offset {
+        label {Offset:}
+        callback {impUI->updateFilter();}
+        xywh {112 191 154 25} maximum 255
+      }
+      Fl_Button {} {
+        label Cancel
+        callback {impUI->cancelFilter();}
+        xywh {152 280 124 24}
+      }
+      Fl_Button {} {
+        label Apply
+        callback {impUI->applyFilter();}
+        xywh {8 280 128 24}
+      }
+      Fl_Button {} {
+        label Preview
+        callback {impUI->previewFilter();}
+        xywh {8 244 268 24}
+      }
+    }
+  }
+  Function {show()} {open
+  } {
+    code {mainWindow->show();} {}
+  }
+  decl {ImpressionistUI *impUI;} {public
+  }
+  Function {hide()} {open
+  } {
+    code {mainWindow->hide();} {}
+  }
+} 
